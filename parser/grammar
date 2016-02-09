@@ -1,0 +1,10 @@
+Shell grammar:
+--------------
+
+S				::= [exp]+
+exp				::= separator_exp
+separator_exp	::= [and | or] [N_SEPARATOR [exp]]?
+read_and		::= pipe [N_AND and]?
+read_or			::= pipe [N_OR or]?
+pipe			::= command [N_PIPE pipe]?
+command			::= ANYTHING [ANYTHING]*
